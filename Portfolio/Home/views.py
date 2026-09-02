@@ -1,3 +1,4 @@
+from django.core.serializers import python
 from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Project
@@ -143,20 +144,25 @@ def skills_data(request):
         
     }
     return JsonResponse(data)
-
+   
 def projects_data(request):
     projects = Project.objects.all()
+
     data = []
+
     for project in projects:
         data.append({
-            "name" : project.name,
-            "description" : project.description,
-            "image" : project.image.url if project.image else "",
-            "tech_stack" : project.tech_stack,
-            "git_url" : project.git_url,
-            "live_demo" : project.live_demo or "",
+            "name": project.name,
+            "description": project.description,
+            "image": "",
+            "tech_stack": project.tech_stack,
+            "git_url": project.git_url,
+            "live_demo": project.live_demo or "",
         })
-    return JsonResponse(data , safe= False)
+
+    return JsonResponse(data, safe=False)
+
+
 
 def contact(request):
     if request.method == "POST":
