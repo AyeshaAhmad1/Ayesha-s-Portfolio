@@ -1,0 +1,284 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ayesha Ahmad | Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'css/skills.css' %}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="profile_brand">
+
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="logo">
+            </div>
+
+        </div>
+
+
+        <nav class="nav">
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-code"></i>
+                    <a href="{% url 'skills' %}">Skills</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-briefcase"></i>
+                    <a href="{% url 'projects' %}">Projects</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div class="social_links">
+
+            <a href="https://www.linkedin.com/in/ayesha-ahmad-3693873aa/"
+                target="_blank">
+
+                <i class="fa-brands fa-linkedin"></i>
+
+            </a>
+
+
+            <a href="https://github.com/AyeshaAhmad1"
+                target="_blank">
+
+                <i class="fa-brands fa-github"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="skills_main">
+
+
+        <!-- =====================================
+             FIRST SECTION
+             HERO + SKILL CATEGORIES
+             ===================================== -->
+
+        <section class="skills_hero">
+
+
+            <!-- HERO CONTENT -->
+
+            <div class="skills_header">
+
+                <p class="section_label">
+                    MY EXPERTISE
+                </p>
+
+
+                <h1>
+                    Skills & Technologies
+                </h1>
+
+
+                <p class="skills_intro">
+
+                    I enjoy turning ideas into real-world solutions.
+                    These are the tools and technologies I work with
+                    to learn, build, and grow every day.
+
+                </p>
+
+            </div>
+            <div>
+                
+                <p class="skills_note">
+
+                    Learning continuously, building practically,
+                    and strengthening my skills through hands-on experience.
+
+                </p>
+                
+            </div>
+
+
+
+            <!-- LANGUAGES -->
+
+            <div class="skill-category">
+
+                <h2>Languages</h2>
+
+
+                <div
+                    class="skills-list"
+                    id="languages-list">
+
+                    <!-- JavaScript will add language boxes here -->
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WEB TECHNOLOGIES -->
+
+            <div class="skill-category">
+
+                <h2>Web Technologies</h2>
+
+
+                <div
+                    class="skills-list"
+                    id="web-technologies-list">
+
+                    <!-- JavaScript will add web technology boxes here -->
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FRAMEWORKS & TOOLS -->
+
+            <div class="skill-category">
+
+                <h2>Frameworks & Tools</h2>
+
+
+                <div
+                    class="skills-list"
+                    id="frameworks-tools-list">
+
+                    <!-- JavaScript will add framework and tool boxes here -->
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             SECOND SECTION
+             SKILL KNOWLEDGE LEVELS
+             ===================================== -->
+
+        <section class="skill-level-section">
+
+
+            <!-- SMALL NOTE -->
+
+            <div class="learning-note">
+
+                <p class="section_label">
+                    MY LEARNING JOURNEY
+                </p>
+
+
+                <h2>
+                    Always Learning, Always Building
+                </h2>
+
+
+                <p>
+
+                    Every skill represents a different stage of my learning
+                    journey, strengthened through practice and real-world projects.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- SKILL LEVEL HEADING -->
+
+            <div class="level-header">
+
+                <p class="section_label">
+                    CURRENT UNDERSTANDING
+                </p>
+
+
+                <h2>
+                    My Current Skill Level
+                </h2>
+
+
+                <p>
+
+                    A reflection of my current understanding and practical
+                    experience with each technology.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- SKILL LEVELS -->
+
+            <div
+                class="skill-level-list"
+                id="skill-level-list">
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{% static 'js/skills.js' %}"></script>
+
+
+</body>
+
+</html>
