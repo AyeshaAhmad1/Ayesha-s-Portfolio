@@ -145,6 +145,7 @@ def skills_data(request):
     }
     return JsonResponse(data)
    
+
 def projects_data(request):
     projects = Project.objects.all()
 
@@ -154,13 +155,15 @@ def projects_data(request):
         data.append({
             "name": project.name,
             "description": project.description,
-            "image": "",
+            "image": "/static/images/portfolio.jpeg",
             "tech_stack": project.tech_stack,
             "git_url": project.git_url,
             "live_demo": project.live_demo or "",
         })
 
     return JsonResponse(data, safe=False)
+
+
 
 
 
