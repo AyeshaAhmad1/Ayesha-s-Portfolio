@@ -1,0 +1,157 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ayesha Ahmad | Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+     <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+
+    <aside class='sidebar'>
+        <div class=profile_brand>
+            <div class="logo">
+                <img src="{%static 'images/logo.png'%}" alt="logo">
+            </div>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a href="{% url 'home' %}">Home</a></li>
+                <li><i class="fa-solid fa-user"></i><a href="{% url 'about' %}">About</a></li>
+                <li><i class="fa-solid fa-code"></i><a href="{% url 'skills' %}">Skills</a></li>
+                <li><i class="fa-solid fa-briefcase"></i><a href="{% url 'projects' %}">Projects</a></li>
+                <li><i class="fa-solid fa-envelope"></i><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="social_links">
+            <a href="https://www.linkedin.com/in/ayesha-ahmad-3693873aa/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/AyeshaAhmad1" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </aside>
+    <main class="main_content">
+        <section class="hero">
+            <div class="introduction">
+                <p class="greeting">
+                    Hi , i'm
+                </p>
+                <h1 class="name">
+                    Ayesha Ahmad
+                </h1>
+            </div>
+            <div class="animate_intro">
+                <span class="animated_text"></span>
+            </div>
+
+            <p class="tagline">
+                TRANSFORMING IDEAS INTO REALWORLD APPLICATIONS
+            </p>
+            <div class="profile_image">
+                <img src="{%static 'images/pic.png'%}" alt="picture">
+
+            </div>
+
+        </section>
+        <section class="Quick_overview">
+            <div class="overview_card" id="about">
+                <h3 class="card_tittle">About Me</h3>
+                <p>
+                    A Software Engineering student passionate about building applications
+                    and continuously learning new technologies.
+
+                </p>
+                <a href="{% url 'about' %}">More About Me -></a>
+
+            </div>
+            <div class="Overview_card_quick_stats">
+                <h3>Quick Stats</h3>
+                <div class="stats_container">
+                    <div class="stat">
+                        <span class="stat-value">3.95</span>
+                        <span class="stat-label">CGPA</span>
+                        
+                    </div>
+                    <div class="stat">
+
+                        <span class="stat-value">3.97</span>
+                        <span class="stat-label">SGPA</span>
+                    </div>
+                    <div class="stat">
+
+                        <span class="stat-value">3rd</span>
+                        <span class="stat-label">Current Semester</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Overview_card uni_card">
+                <h3>University</h3>
+
+                <p>
+                    <img src="{%static 'images/numl.jpg'%}" alt="pic">
+                    National University Of Modern Languages (NUML) FaislAbad, Pakistan
+                </p>
+                <p>
+                    BS SOftware Engineering
+                </p>
+            </div>
+        </section>
+        <section class="featured_projects" id="projects">
+            <div class="Section_heading">
+                <h2>Featured Projects</h2>
+                <a href="{% url 'projects' %}">View All Projects -></a>
+            </div>
+            <article class="project_card">
+                <h3>Aura - AI Assistant</h3>
+                <p>
+                    Aura is an AI assistant that can perform various tasks
+                    such as answering questions, providing recommendations, and more.
+                    It is designed to help users with their daily activities and improve productivity.
+                </p>
+                <a href="{% url 'projects' %}">View Project Details -></a>
+            </article>
+
+            <article class="project_card">
+                <h3>Digital Voting System with Admin control</h3>
+                <p>
+                    A java_based digital voting system that allows users to cast their votes securely and efficiently.
+                </p>
+                <a href="{% url 'projects' %}">View Project Details -></a>
+            </article>
+
+            <article class="project_card">
+                <h3>E-Voting System</h3>
+                <p>
+                    A Console based Voting system developed in C++.
+                </p>
+                <a href="{% url 'projects' %}">View Project Details -></a>
+            </article>
+
+
+        </section>
+        <section class="closing-section">
+
+            <p>
+                Currently exploring new technologies and continuously
+                expanding my skills to build better solutions.
+            </p>
+
+        </section>
+    </main>
+        <script src="{% static 'js/home.js' %}"></script>
+
+
+</body>
+
+
+</html>
