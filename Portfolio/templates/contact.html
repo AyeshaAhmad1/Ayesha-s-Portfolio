@@ -1,0 +1,297 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ayesha Ahmad | Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         SIDEBAR
+         ========================= -->
+
+    <aside class="sidebar">
+
+        <div class="profile_brand">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="logo">
+            </div>
+        </div>
+
+        <nav class="nav">
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-code"></i>
+                    <a href="{% url 'skills' %}">Skills</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-briefcase"></i>
+                    <a href="{% url 'projects' %}">Projects</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="social_links">
+
+            <a href="https://www.linkedin.com/in/ayesha-ahmad-3693873aa/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <i class="fa-brands fa-linkedin"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+
+    <main class="main_content">
+
+
+        <!-- =========================
+             SECTION 1
+             CONTACT INFORMATION
+             ========================= -->
+
+        <section class="contact_info_section">
+
+            <div class="contact_info_heading">
+
+                <h1>Let's Connect</h1>
+
+                <p>
+                    Have a project in mind, a question, or an opportunity to discuss?
+                    Feel free to reach out. I would be happy to connect and discuss
+                    how we can work together.
+                </p>
+
+            </div>
+
+
+            <div class="contact_details">
+
+
+                <!-- EMAIL -->
+
+                <div class="contact_item">
+
+                    <div class="contact_icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div class="contact_text">
+
+                        <h2>Email</h2>
+
+                        <a href="mailto:developer.ayeshaahmad@gmail.com">
+                            developer.ayeshaahmad@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="contact_item">
+
+                    <div class="contact_icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div class="contact_text">
+
+                        <h2>Phone</h2>
+
+                        <a href="tel:+923063330085">
+                            +92 3063330085
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LINKEDIN -->
+
+                <div class="contact_item">
+
+                    <div class="contact_icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+
+                    <div class="contact_text">
+
+                        <h2>LinkedIn</h2>
+
+                        <a
+                            href="https://www.linkedin.com/in/ayesha-ahmad-3693873aa/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Connect with me on LinkedIn
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SECTION 2
+             CONTACT FORM
+             ========================= -->
+
+        <section class="contact_form_section">
+
+            <div class="content_heading">
+
+                <h1>Contact Me</h1>
+
+            </div>
+
+
+            <div class="contact_area">
+
+                <form id="contact-form" method="POST">
+
+                    {% csrf_token %}
+
+
+                    <!-- NAME -->
+
+                    <div class="name_heading">
+
+                        <h2>Your Name</h2>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="name_area"
+                            placeholder="Enter your name......"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="Email_heading">
+
+                        <h2>Your Email</h2>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="Email_area"
+                            placeholder="Enter your Email....."
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PURPOSE / MESSAGE -->
+
+                    <div class="Purpose_heading">
+
+                        <h2>Purpose to connect</h2>
+
+                        <textarea
+                            id="purpose"
+                            name="purpose"
+                            class="purpose_area"
+                            placeholder="About your project....."
+                            rows="6"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- SUBMIT BUTTON -->
+
+                    <div class="Submit_button">
+
+                        <button type="submit">
+                            Contact
+                        </button>
+
+                    </div>
+
+
+                    <!-- STATUS MESSAGE -->
+
+                    <p id="contact-status"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
+
+    <script src="{% static 'js/contact.js' %}"></script>
+
+</body>
+
+</html>
+
+ 
