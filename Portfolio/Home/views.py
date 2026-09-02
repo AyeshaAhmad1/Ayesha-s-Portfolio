@@ -2,8 +2,8 @@ from django.core.serializers import python
 from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Project
-from django.core.mail import send_mail
-from django.core.mail import EmailMessage
+import os
+import resend
 
 def home (request):
     return render(request , 'home.html')
@@ -174,22 +174,20 @@ def contact(request):
         email = request.POST.get("email")
         purpose = request.POST.get("purpose")
 
-        send_mail(
-            subject=f"Portfolio Contact - {name}",
-            message=f"""
-You received a new message through your portfolio.
+        resend.api_key = os.getenv("RESEND_API_KEY")
 
-Name: {name}
-Email: {email}
-
-Purpose to connect:
-{purpose}
-""",
-            from_email=None,
-            recipient_list=["developer.ayeshaahmad@gmail.com"],
-            fail_silently=False,
-            reply_to=[email],
-        )
+        resend.Emails.send({
+            "from": "onboarding@resend.dev",
+            "to": ["developer.ayeshaahmad@gmail.com"],
+            "subject": f"Portfolio Contact - {name}",
+            "html": f"""
+                <h2>New Portfolio Contact</h2>
+                <p><strong>Name:</strong> {name}</p>
+                <p><strong>Email:</strong> {email}</p>
+                <p><strong>Purpose to connect:</strong></p>
+                <p>{purpose}</p>
+            """
+        })
 
         return JsonResponse({
             "status": "success",
