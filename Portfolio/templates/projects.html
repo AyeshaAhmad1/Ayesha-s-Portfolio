@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="profile_brand">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="logo">
+            </div>
+        </div>
+
+
+        <nav class="nav">
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-code"></i>
+                    <a href="{% url 'skills' %}">Skills</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-briefcase"></i>
+                    <a href="{% url 'projects' %}">Projects</a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+
+            </ul>
+        </nav>
+
+
+        <div class="social_links">
+
+            <a href="https://www.linkedin.com/in/ayesha-ahmad-3693873aa/"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/AyeshaAhmad1"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main_content">
+
+        <section class="projects-section" id="projects">
+
+            <div class="projects-container">
+
+                <!-- Projects Section Heading -->
+                <div class="projects-heading">
+
+                    <span class="section-label">MY WORK</span>
+
+                    <h1>Projects</h1>
+
+                    <p>
+                        A collection of projects I have built and developed
+                        throughout my learning journey.
+                    </p>
+
+                </div>
+
+
+                <!--
+                    JavaScript will create the projects here.
+
+                    We will NOT write:
+                    - Project name
+                    - Description
+                    - Image
+                    - GitHub URL
+                    - Live Demo URL
+
+                    Those values will come from the database.
+                -->
+
+                <div class="projects-list" id="projects-list">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="{% static 'js/projects.js' %}"></script>
+
+</body>
+
+</html>
