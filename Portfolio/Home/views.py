@@ -152,16 +152,16 @@ def projects_data(request):
     data = []
 
     for project in projects:
-        image_name = ""
+        image_url = ""
 
         if project.image:
             filename = project.image.name.split("/")[-1]
-            image_name = f"https://raw.githubusercontent.com/AyeshaAhmad1/Ayesha-s-Portfolio/main/Portfolio/media/projects/{filename}"
+            image_url = f"/static/projects/{filename}"
 
         data.append({
             "name": project.name,
             "description": project.description,
-            "image": image_name,
+            "image": image_url,
             "tech_stack": project.tech_stack,
             "git_url": project.git_url,
             "live_demo": project.live_demo or "",
