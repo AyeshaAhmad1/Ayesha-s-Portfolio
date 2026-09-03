@@ -155,14 +155,13 @@ def projects_data(request):
         data.append({
             "name": project.name,
             "description": project.description,
-            "image": "/static/images/portfolio.jpeg",
+            "image": project.image.url if project.image else "",
             "tech_stack": project.tech_stack,
             "git_url": project.git_url,
             "live_demo": project.live_demo or "",
         })
 
     return JsonResponse(data, safe=False)
-
 
 
 
