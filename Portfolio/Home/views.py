@@ -155,7 +155,7 @@ def projects_data(request):
         "Online Voting System with Admin Control": "/static/static/projects/onlinevotingjava.png",
         "Tic-Tac-Toe Game": "/static/static/projects/tictactoe.png",
         "Rock Paper Scissors Game": "/static/static/projects/rockpaperscissors.png",
-        "KBC Quiz Game": "/static/static/projects/KBC.png",
+        "KBC (Kaun Banega Crorepati) Quiz Game": "/static/static/projects/KBC.png",
         "Java Swing Calculator Application": "/static/static/projects/calculator.png",
         "Student Contact Form – Java Swing GUI Application": "/static/static/projects/studentcontactform.png",
         "E-Voting System – C++ Console-Based Application": "/static/static/projects/c++voting.png",
@@ -167,7 +167,7 @@ def projects_data(request):
         data.append({
             "name": project.name,
             "description": project.description,
-            "image": images.get(project.name, ""),
+            "image": images.get(project.name.strip(), ""),
             "tech_stack": project.tech_stack,
             "git_url": project.git_url,
             "live_demo": project.live_demo or "",
