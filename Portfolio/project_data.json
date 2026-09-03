@@ -87,7 +87,7 @@
     "model": "Home.project",
     "pk": 8,
     "fields": {
-        "name": "Student Contact Form – Java Swing GUI Application",
+        "name": "Student Contact Form â€“ Java Swing GUI Application",
         "description": "GUI-based Student Contact Form developed using Java and Java Swing. The application provides an interactive interface for entering student contact information and display them on another page, such as name and other contact details. It focuses on creating a user-friendly form and handling user input through graphical components.",
         "image": "projects/Screenshot_2026-05-02_180406.png",
         "tech_stack": "Java, Java Swing, GUI Development, Event Handling, User Input Handling, Form Design, Object-Oriented Programming (OOP)",
@@ -99,7 +99,7 @@
     "model": "Home.project",
     "pk": 9,
     "fields": {
-        "name": "E-Voting System – C++ Console-Based Application",
+        "name": "E-Voting System â€“ C++ Console-Based Application",
         "description": "A console-based Electronic Voting System developed in C++ as an academic project. The system was designed to manage the voting process, including voter interaction, candidate selection, vote casting, vote counting, and displaying election results through a structured console interface.  This project helped me strengthen my understanding of core C++ programming concepts and build a complete application using logical problem-solving and data management.",
         "image": "projects/Screenshot_2026-09-03_080711.png",
         "tech_stack": "C++, File Handling, Conditional Statements, Loops, Functions, Input/Output Operations, Data Handling, and Application Logic",
