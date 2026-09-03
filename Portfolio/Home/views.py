@@ -149,19 +149,25 @@ def skills_data(request):
 def projects_data(request):
     projects = Project.objects.all()
 
+    images = {
+        "Aura AI Assistant": "/static/static/projects/AURAgui.jpeg",
+        "Aura_Voice_Assistent": "/static/static/projects/pythonaura.png",
+        "Online Voting System with Admin Control": "/static/static/projects/onlinevotingjava.png",
+        "Tic-Tac-Toe Game": "/static/static/projects/tictactoe.png",
+        "Rock Paper Scissors Game": "/static/static/projects/rockpaperscissors.png",
+        "KBC Quiz Game": "/static/static/projects/KBC.png",
+        "Java Swing Calculator Application": "/static/static/projects/calculator.png",
+        "Student Contact Form – Java Swing GUI Application": "/static/static/projects/studentcontactform.png",
+        "E-Voting System – C++ Console-Based Application": "/static/static/projects/c++voting.png",
+    }
+
     data = []
 
     for project in projects:
-        image_url = ""
-
-        if project.image:
-            filename = project.image.name.split("/")[-1]
-            image_url = f"/static/projects/{filename}"
-
         data.append({
             "name": project.name,
             "description": project.description,
-            "image": image_url,
+            "image": images.get(project.name, ""),
             "tech_stack": project.tech_stack,
             "git_url": project.git_url,
             "live_demo": project.live_demo or "",
