@@ -45,24 +45,24 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <i class="fa-solid fa-graduation-cap"></i>
             </div>
 
-            <h3>Education</h3>
+            <h3 style="font-weight: bold;">Education</h3>
 
             <p>
-                <strong>University:</strong>
+                <strong style="font-weight: bold;">University:</strong>
                 ${data.Education.University}
             </p>
 
             <p>
-                <strong>Degree:</strong>
+                <strong style="font-weight: bold;">Degree:</strong>
                 ${data.Education.Degree}
             </p>
 
             <p>
-                <strong>Semester:</strong>
+                <strong style="font-weight: bold;">Semester:</strong>
                 ${data.Education.Semester}
             </p>
             <p>
-                <strong>CGPA:</strong>
+                <strong style="font-weight: bold;">CGPA:</strong>
                 ${data.Education.CGPA}
             </p>
         `;
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <i class="fa-solid fa-location-dot"></i>
             </div>
 
-            <h3>Location</h3>
+            <h3 style="font-weight: bold;">Location</h3>
 
             <p>${data.Location.city}</p>
 
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <i class="fa-solid fa-heart"></i>
             </div>
 
-            <h3>Interests</h3>
+            <h3 style="font-weight: bold;">Interests</h3>
 
             <ul>
                 ${data.Interests.map(interest =>
